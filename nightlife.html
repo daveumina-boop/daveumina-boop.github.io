@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nightlife | FUNdusky</title>
 
+<style>
+body { margin:0; font-family:Arial; background:#f5f9ff; }
+.hero {
+  height:55vh;
+  background:url("images/nightlife.jpg") center/cover;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; text-align:center;
+}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background:rgba(0,0,0,.6);
+}
+.hero h1 { position:relative; font-size:3rem; }
+.container { padding:30px; max-width:900px; margin:auto; }
+.card {
+  background:#fff; border-radius:16px; overflow:hidden;
+  margin-bottom:20px; box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.card img { height:250px; object-fit:cover; width:100%; }
+.card-content { padding:20px; }
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Nightlife</h1>
+</div>
+
+<div class="container">
+<a href="index.html">← Back</a>
+
+<div class="card">
+<img src="images/nightlife.jpg">
+<div class="card-content">
+<h2>Bars & Live Music</h2>
+<p>Sandusky nightlife is loud, packed, and unforgettable.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/nightlife.jpg">
+<div class="card-content">
+<h2>Late Night Spots</h2>
+<p>When the sun goes down, this is where the city wakes up.</p>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
