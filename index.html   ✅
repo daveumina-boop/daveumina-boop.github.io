@@ -256,7 +256,7 @@
 
       <div class="grid-2">
         <a href="water.html" class="card category-card">
-          <img src="images/boat.jpg" alt="On the Water" />
+          <img src="images/boat.PNG" alt="On the Water" />
           <div class="category-overlay">
             <div>
               <h3>On the Water</h3>
@@ -313,7 +313,7 @@
         </a>
 
         <a href="water.html" class="card">
-          <img src="images/boat.jpg" alt="Boat Rentals and Sunset Cruises" />
+          <img src="images/boat.PNG" alt="Boat Rentals and Sunset Cruises" />
           <div class="card-content">
             <h3>Boat Rentals & Sunset Cruises</h3>
             <p>Relax, cruise, and catch the best views on the water with your group.</p>
@@ -326,4 +326,4 @@
   <div class="footer-space"></div>
 
 </body>
-</html>
+</html>ppl
