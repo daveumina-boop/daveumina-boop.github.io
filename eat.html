@@ -7,109 +7,123 @@
 
 <style>
 body {
-  margin:0;
-  font-family:-apple-system, BlinkMacSystemFont, sans-serif;
-  background:#f5f9ff;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: #f5f9ff;
 }
 
 .hero {
-  height:55vh;
-  background:url("images/hero-bg.jpg") center/cover;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  color:white;
-  text-align:center;
-  position:relative;
+  height: 55vh;
+  background: url("images/hero-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
 }
 
 .hero::after {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.35);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);
 }
 
 .hero-content {
-  position:relative;
-  z-index:2;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size:2.8rem;
-  margin:0;
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
 .container {
-  padding:25px;
-  max-width:900px;
-  margin:auto;
+  padding: 25px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #4b2a7a;
+  font-weight: bold;
 }
 
 .section-title {
-  font-size:2rem;
-  color:#0c2d68;
-  margin-bottom:20px;
+  font-size: 2rem;
+  color: #0c2d68;
+  margin-bottom: 20px;
 }
 
-.card {
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  margin-bottom:25px;
-  box-shadow:0 12px 30px rgba(0,0,0,.12);
+.restaurant-card {
+  display: block;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
 
-.card img {
-  width:100%;
-  height:220px;
-  object-fit:cover;
+.restaurant-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 
-.card-content {
-  padding:20px;
+.restaurant-card-content {
+  padding: 22px;
 }
 
-.card h3 {
-  margin:0 0 10px 0;
-  font-size:1.5rem;
+.restaurant-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  color: #0c2d68;
 }
 
-.card p {
-  margin:0;
-  color:#555;
-}
-
-.button {
-  display:inline-block;
-  background:#f29a38;
-  color:white;
-  padding:14px 26px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:15px;
+.restaurant-card p {
+  margin: 0;
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
 .cta {
-  text-align:center;
-  margin:50px 0;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.button {
+  display: inline-block;
+  background: #f29a38;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 .signup {
-  background:#0c2d68;
-  color:white;
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
+  background: #0c2d68;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-content">
     <h1>Where to Eat</h1>
@@ -119,49 +133,37 @@ body {
 
 <div class="container">
 
-<a href="index.html">← Back to Home</a>
+  <a href="index.html" class="back-link">← Back to Home</a>
 
-<h2 class="section-title">Featured Restaurants</h2>
+  <h2 class="section-title">Featured Restaurants</h2>
 
-<!-- THIRSTY PONY -->
-<div class="card">
-  <img src="images/thirstypony-bar.jpg">
-  <div class="card-content">
-    <h3>Thirsty Pony</h3>
-    <p>Massive sports bar, wings, drinks, and always something going on.</p>
+  <a href="thirstypony.html" class="restaurant-card">
+    <img src="images/thirstypony-wings.jpg" alt="Thirsty Pony wings">
+    <div class="restaurant-card-content">
+      <h3>Thirsty Pony</h3>
+      <p>Big sports bar energy, wings, drinks, and one of Sandusky’s best hangouts.</p>
+    </div>
+  </a>
+
+  <a href="club.html" class="restaurant-card">
+    <img src="images/club-food.jpg" alt="The Club food">
+    <div class="restaurant-card-content">
+      <h3>The Club</h3>
+      <p>One of Sandusky’s go-to spots for great food, strong atmosphere, and a local feel.</p>
+    </div>
+  </a>
+
+  <div class="cta">
+    <h2>Delivery Coming Soon</h2>
+    <a href="#" class="button">Get Notified</a>
   </div>
-</div>
 
-<div class="card">
-  <img src="images/thirstypony-wings.jpg">
-</div>
-
-<!-- THE CLUB -->
-<div class="card">
-  <img src="images/club-outside.jpg">
-  <div class="card-content">
-    <h3>The Club</h3>
-    <p>One of Sandusky’s go-to spots for great food and a strong local vibe.</p>
+  <div class="signup">
+    <h2>Own a Restaurant?</h2>
+    <p>Get featured on FUNdusky and reach thousands of visitors.</p>
+    <br>
+    <a href="#" class="button">Get Featured</a>
   </div>
-</div>
-
-<div class="card">
-  <img src="images/club-food.jpg">
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <h2>Delivery Coming Soon</h2>
-  <a href="#" class="button">Get Notified</a>
-</div>
-
-<!-- SIGNUP -->
-<div class="signup">
-  <h2>Own a Restaurant?</h2>
-  <p>Get featured on FUNdusky and reach thousands of visitors.</p>
-  <br>
-  <a href="#" class="button">Get Featured</a>
-</div>
 
 </div>
 
