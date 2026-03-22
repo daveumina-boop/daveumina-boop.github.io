@@ -1,163 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Erie Wake Zone | FUNdusky</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Erie Wake Zone</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #1c2333;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5f7fb;
+  color: #1f2c4c;
+}
 
-    a { text-decoration: none; }
+.hero {
+  height: 60vh;
+  background: url('images/erie-wakezone-hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+}
 
-    .hero {
-      height: 70vh;
-      background:
-        linear-gradient(to bottom, rgba(0,0,0,.2), rgba(0,0,0,.6)),
-        url("images/eriewakezone-hero.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+.hero h1 {
+  margin: 0;
+  font-size: 34px;
+}
 
-    .hero h1 {
-      font-size: 3.5rem;
-      margin: 0;
-    }
+.section {
+  padding: 25px;
+}
 
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-    }
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  margin: 10px 10px 0 0;
+  font-weight: 600;
+}
 
-    .cta {
-      margin-top: 20px;
-    }
+.book {
+  background: #3aa35c;
+  color: white;
+}
 
-    .btn {
-      padding: 14px 24px;
-      border-radius: 999px;
-      font-weight: bold;
-      color: white;
-      display: inline-block;
-      margin: 6px;
-    }
-
-    .book { background: #27ae60; }
-    .map { background: #f29a38; }
-    .call { background: #0c2d68; }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 20px;
-    }
-
-    h2 {
-      color: #0c2d68;
-      margin-bottom: 10px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 16px;
-      height: 240px;
-      object-fit: cover;
-    }
-
-    .highlight {
-      background: white;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,.1);
-    }
-
-    .back {
-      display: inline-block;
-      margin-bottom: 20px;
-      font-weight: bold;
-      color: #4b2a7a;
-    }
-  </style>
+.back {
+  display: block;
+  margin: 15px;
+  color: #6a6a6a;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Erie Wake Zone</h1>
-    <p>Jet skis. Lake Erie. Real fun.</p>
+<a class="back" href="index.html">← Back</a>
 
-    <div class="cta">
-      <a href="https://erie-wake-zone.manage.na1.bookingplatform.app/reserve/" target="_blank" class="btn book">Book Now</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=701+E+Water+Street+Sandusky+OH+44870" target="_blank" class="btn map">Directions</a>
-      <a href="tel:+14199019910" class="btn call">Call</a>
-    </div>
-  </div>
-</section>
-
-<div class="container">
-
-<a href="water.html" class="back">← Back to Water</a>
-
-<!-- WHY THIS IS A MUST -->
-<div class="section highlight">
-  <h2>This is what people come here for.</h2>
-  <p>
-    When people come to Sandusky, they don’t want to scroll. They don’t want to guess.
-    They want to get on the water.
-  </p>
-  <p>
-    Erie Wake Zone makes that happen — fast, easy, and unforgettable.
-  </p>
+<div class="hero">
+  <h1>Erie Wake Zone</h1>
 </div>
 
-<!-- GALLERY -->
 <div class="section">
-  <h2>What it actually looks like</h2>
+  <h2>Ride. Cruise. Explore.</h2>
+  <p>
+    Jet skis, boat rentals, and sunset cruises in Sandusky Bay.
+    Whether you want speed or a laid-back cruise, this is where the water experience starts.
+  </p>
 
-  <div class="gallery">
-    <img src="images/eriewakezone-main.jpg" />
-    <img src="images/eriewakezone-ride.jpg" />
-    <img src="images/eriewakezone-fleet.jpg" />
-    <img src="images/eriewakezone-hero.jpg" />
-  </div>
-</div>
-
-<!-- DETAILS -->
-<div class="section highlight">
-  <h2>Location</h2>
-  <p><strong>701 E. Water Street<br>Sandusky, OH</strong></p>
-
-  <p><strong>Phone:</strong> (419) 901-9910</p>
-</div>
-
-<!-- FINAL CTA -->
-<div class="section" style="text-align:center;">
-  <h2>Ready to ride?</h2>
-
-  <a href="https://erie-wake-zone.manage.na1.bookingplatform.app/reserve/" target="_blank" class="btn book">Book Your Jet Ski</a>
-</div>
-
+  <a class="button book" href="https://erie-wake-zone.manage.na1.bookingplatform.app/reserve/" target="_blank">
+    Book Now
+  </a>
 </div>
 
 </body>
