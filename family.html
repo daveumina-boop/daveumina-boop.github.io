@@ -32,7 +32,9 @@
 
     .hero p {
       margin-top: 10px;
-      max-width: 500px;
+      max-width: 520px;
+      font-size: 18px;
+      line-height: 1.5;
     }
 
     .container {
@@ -53,45 +55,95 @@
       margin-bottom: 30px;
     }
 
+    .section-title h2 {
+      font-size: 40px;
+      margin: 0 0 10px;
+    }
+
+    .section-title p {
+      color: #5f6b7a;
+      font-size: 18px;
+    }
+
     .card {
       background: white;
       border-radius: 20px;
       overflow: hidden;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       box-shadow: 0 10px 25px rgba(0,0,0,.08);
     }
 
     .card img {
       width: 100%;
-      height: 240px;
+      height: 260px;
       object-fit: cover;
     }
 
     .card-content {
-      padding: 20px;
+      padding: 24px;
     }
 
     .tag {
       display: inline-block;
       background: #eef1f7;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      margin-bottom: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
-    h2 {
-      margin: 10px 0;
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 30px;
+    }
+
+    .card p {
+      color: #5f6b7a;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 20px;
       background: #f29a38;
       color: white;
-      padding: 12px 20px;
-      border-radius: 25px;
+      padding: 14px 24px;
+      border-radius: 999px;
       font-weight: bold;
+    }
+
+    .list {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .list h3 {
+      margin-bottom: 10px;
+    }
+
+    .list p {
+      color: #5f6b7a;
+      margin: 6px 0;
+    }
+
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .cta h3 {
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: #5f6b7a;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -102,7 +154,7 @@
 <div class="hero">
   <div>
     <h1>Family Fun</h1>
-    <p>Bowling, arcades, go-karts, mini golf, and indoor fun for families, kids, and groups in Sandusky.</p>
+    <p>Bowling, arcades, and things to do with kids and groups in Sandusky.</p>
   </div>
 </div>
 
@@ -111,64 +163,40 @@
   <a href="index.html" class="back">← Back to Home</a>
 
   <div class="section-title">
-    <h2>More than one thing to do</h2>
-    <p>This page helps you quickly find the best family-friendly spots in Sandusky.</p>
-  </div>
-
-  <!-- GHOSTLY MANOR -->
-  <div class="card">
-    <img src="images/family.jpg" alt="Ghostly Manor">
-    <div class="card-content">
-      <div class="tag">Indoor Favorite</div>
-      <h2>Ghostly Manor</h2>
-      <p>
-        One of Sandusky’s easiest all-in-one family stops. Perfect for indoor fun,
-        group activities, and days when the weather doesn’t cooperate.
-      </p>
-    </div>
-  </div>
-
-  <!-- GOOFY GOLF -->
-  <div class="card">
-    <img src="images/goofy-golf.jpg" alt="Goofy Golf">
-    <div class="card-content">
-      <div class="tag">Mini Golf + Go-Karts</div>
-      <h2>Goofy Golf</h2>
-      <p>
-        A Sandusky classic with mini golf, go-karts, and arcade-style fun.
-        Great for kids, parents, and groups looking for something active.
-      </p>
-      <a href="https://goofy-golf.com" target="_blank" class="btn">Visit</a>
-    </div>
+    <h2>Featured Spot</h2>
+    <p>One place you can actually book right now.</p>
   </div>
 
   <!-- CEDAR CORNER -->
   <div class="card">
     <img src="images/club-outside.jpg" alt="Cedar Corner Bowling">
     <div class="card-content">
-      <div class="tag">Bowling</div>
+      <div class="tag">Reserve Lanes</div>
       <h2>Cedar Corner Bowling</h2>
       <p>
-        A strong family and group option for indoor fun. Great for rainy days,
-        mixed-age groups, and classic bowling nights.
+        A go-to spot in Sandusky for families and groups. Easy, fun, and perfect for all ages —
+        especially when you want something you can book ahead of time.
       </p>
+
       <a href="https://cedarcorner.com/lane-reservations/" target="_blank" class="btn">
         Reserve a Lane
       </a>
     </div>
   </div>
 
-  <!-- THIRSTY PONY -->
-  <div class="card">
-    <img src="images/thirstypony-bar.jpg" alt="Thirsty Pony">
-    <div class="card-content">
-      <div class="tag">Arcade • Axe Throwing • Bowling</div>
-      <h2>Thirsty Pony</h2>
-      <p>
-        A full entertainment stop with arcade games, bowling, and axe throwing.
-        Good for families during the day and groups at night.
-      </p>
-    </div>
+  <!-- OTHER OPTIONS -->
+  <div class="list">
+    <h3>Other Things To Do</h3>
+    <p>Ghostly Manor</p>
+    <p>Goofy Golf</p>
+    <p>Axe Throwing at Thirsty Pony</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h3>Own a Local Attraction?</h3>
+    <p>Get featured and send customers directly to your booking system.</p>
+    <a href="mailto:youremail@example.com" class="btn">Get Featured</a>
   </div>
 
 </div>
