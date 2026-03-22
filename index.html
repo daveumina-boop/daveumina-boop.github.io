@@ -18,23 +18,23 @@
       color: inherit;
     }
 
+    /* HERO */
     .hero {
       position: relative;
       height: 75vh;
-      background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.25)),
+      background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.25)),
                   url("images/hero-bg.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 30px 20px;
+      padding: 0 20px;
       color: white;
     }
 
     .hero-content {
       max-width: 700px;
-      position: relative;
-      z-index: 2;
+      transform: translateY(-60px); /* 🔥 pushes everything UP */
     }
 
     .logo {
@@ -58,10 +58,12 @@
       margin-right: auto;
     }
 
+    /* SECTION */
     .section {
       padding: 20px;
     }
 
+    /* CARDS */
     .card {
       position: relative;
       border-radius: 20px;
@@ -102,6 +104,7 @@
 
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
       <img src="images/fundusky-logo.png" class="logo" alt="FUNdusky logo">
@@ -110,11 +113,12 @@
     </div>
   </div>
 
+  <!-- CARDS -->
   <div class="section">
 
     <a href="water.html">
       <div class="card">
-        <img src="images/boat.PNG?v=6" alt="On the Water">
+        <img src="images/boat.PNG?v=7" alt="On the Water">
         <div class="card-overlay">
           <h2>On the Water</h2>
           <p>Jet skis, boats, and sunset cruises on Sandusky Bay.</p>
