@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>On the Water | FUNdusky</title>
-  <meta name="description" content="Jet skis, boat rentals, and sunset cruises on Lake Erie." />
+  <meta name="description" content="Jet skis, boat rentals, and water experiences in Sandusky." />
   <style>
     :root {
       --navy: #0c2d68;
-      --navy-dark: #081d45;
       --orange: #f29a38;
       --orange-dark: #de8521;
-      --bg: #f5f9ff;
-      --card: #ffffff;
+      --green: #27ae60;
+      --green-dark: #1f8a4c;
+      --bg: #f5f7fb;
       --text: #1c2333;
       --muted: #5f6b7a;
-      --shadow: 0 10px 25px rgba(0,0,0,0.10);
-      --radius: 18px;
-      --max: 1120px;
+      --shadow: 0 12px 30px rgba(0,0,0,.12);
+      --radius: 22px;
     }
 
     * {
@@ -26,14 +25,9 @@
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-    }
-
-    img {
-      width: 100%;
-      display: block;
     }
 
     a {
@@ -41,176 +35,223 @@
       color: inherit;
     }
 
+    img {
+      width: 100%;
+      display: block;
+    }
+
     .hero {
-      min-height: 58vh;
-      background: linear-gradient(rgba(8,29,69,0.45), rgba(8,29,69,0.62)), url("images/hero-bg.jpg") center/cover no-repeat;
+      min-height: 60vh;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.55)),
+        url("images/eriewakezone-hero.jpg") center/cover no-repeat;
       display: flex;
-      align-items: center;
+      align-items: end;
       justify-content: center;
       text-align: center;
-      color: #fff;
-      padding: 40px 16px;
+      color: white;
+      padding: 24px 18px 36px;
     }
 
     .hero-content {
-      width: min(calc(100% - 32px), 880px);
+      max-width: 820px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.32);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
     .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2.3rem, 5vw, 4.2rem);
-      line-height: 1.05;
+      font-size: clamp(2.6rem, 7vw, 4.8rem);
+      margin: 0 0 10px;
+      line-height: 0.96;
+      font-weight: 800;
+      text-shadow: 0 6px 20px rgba(0,0,0,0.22);
     }
 
     .hero p {
-      margin: 0 auto;
-      max-width: 700px;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      line-height: 1.5;
-      color: rgba(255,255,255,0.95);
+      margin: 0;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,0.96);
     }
 
     .container {
-      width: min(calc(100% - 32px), var(--max));
+      width: min(calc(100% - 32px), 1050px);
       margin: 0 auto;
-      padding: 42px 0 70px;
+      padding: 28px 0 70px;
     }
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-    }
-
-    .back-link {
-      color: var(--navy);
+    .back {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: #4b2a7a;
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
-    .section-title {
+    .intro {
+      margin-bottom: 28px;
+    }
+
+    .intro h2 {
       margin: 0 0 8px;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--navy-dark);
-      text-align: center;
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3rem);
     }
 
-    .section-subtitle {
-      margin: 0 auto 34px;
-      max-width: 760px;
-      text-align: center;
+    .intro p {
+      margin: 0;
       color: var(--muted);
       line-height: 1.6;
       font-size: 1.05rem;
     }
 
-    .card {
-      background: var(--card);
+    .featured {
+      background: white;
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: var(--shadow);
       margin-bottom: 30px;
+      box-shadow: var(--shadow);
     }
 
-    .card img {
-      height: 340px;
+    .featured img {
+      height: 320px;
       object-fit: cover;
     }
 
-    .card-content {
+    .featured-content {
       padding: 24px;
     }
 
-    .card h2 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: clamp(1.6rem, 3vw, 2rem);
+    .featured-badge {
+      display: inline-block;
+      background: #eaf7ee;
+      color: #1f8a4c;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
     }
 
-    .card p {
-      margin: 0 0 18px;
+    .featured h3 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      color: var(--navy);
+    }
+
+    .featured p {
+      margin: 0;
       color: var(--muted);
       line-height: 1.7;
       font-size: 1.05rem;
     }
 
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
     .btn {
       display: inline-block;
-      padding: 13px 22px;
+      padding: 14px 24px;
       border-radius: 999px;
       font-weight: bold;
-      box-shadow: var(--shadow);
-      transition: 0.2s ease;
+      color: white;
     }
 
-    .btn-primary {
+    .btn.book {
+      background: var(--green);
+    }
+
+    .btn.book:hover {
+      background: var(--green-dark);
+    }
+
+    .btn.map {
       background: var(--orange);
-      color: #fff;
     }
 
-    .btn-primary:hover {
+    .btn.map:hover {
       background: var(--orange-dark);
     }
 
-    .info-strip {
-      background: #ffffff;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
-      margin-bottom: 30px;
+    .btn.call {
+      background: var(--navy);
     }
 
-    .info-strip h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-      font-size: 1.35rem;
-    }
-
-    .info-strip p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .two-col {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
 
-    .mini-card {
-      background: #fff;
+    .card {
+      background: white;
       border-radius: var(--radius);
+      overflow: hidden;
       box-shadow: var(--shadow);
+    }
+
+    .card img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
       padding: 22px;
     }
 
-    .mini-card h3 {
+    .card h3 {
       margin: 0 0 10px;
+      font-size: 1.7rem;
       color: var(--navy);
-      font-size: 1.25rem;
     }
 
-    .mini-card p {
+    .card p {
       margin: 0;
       color: var(--muted);
       line-height: 1.6;
+      font-size: 1.02rem;
     }
 
-    @media (max-width: 820px) {
-      .card img {
-        height: 240px;
+    .gallery-section {
+      margin-top: 40px;
+    }
+
+    .gallery-section h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--navy);
+    }
+
+    .gallery {
+      display: grid;
+      gap: 16px;
+    }
+
+    .gallery img {
+      border-radius: 18px;
+      height: 240px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    @media (min-width: 860px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-
-      .topbar {
-        justify-content: center;
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -219,64 +260,68 @@
 
   <section class="hero">
     <div class="hero-content">
+      <div class="hero-tag">Sandusky Water Picks</div>
       <h1>On the Water</h1>
-      <p>Jet skis, boat rentals, and sunset cruises on Lake Erie — the fun side of Sandusky starts here.</p>
+      <p>Jet skis, boat rentals, sunset cruises, and the local experiences worth booking.</p>
     </div>
   </section>
 
   <div class="container">
+    <a href="index.html" class="back">← Back to Home</a>
 
-    <div class="topbar">
-      <a href="index.html" class="back-link">← Back to Home</a>
-    </div>
-
-    <h2 class="section-title">Ride. Cruise. Explore.</h2>
-    <p class="section-subtitle">
-      Whether you want speed on a Sea-Doo or a laid-back cruise with your group, this is where the Sandusky water experience comes together.
-    </p>
-
-    <div class="card">
-      <img src="images/jetski.jpg" alt="Jet Ski Rentals on Lake Erie" />
-      <div class="card-content">
-        <h2>Jet Ski Rentals</h2>
-        <p>
-          Get out on Lake Erie and ride your own Sea-Doo for a real Sandusky day. Perfect for thrill seekers, first-timers, and anyone who wants to explore the water from a whole new angle.
-        </p>
-        <a href="#" class="btn btn-primary">Book Jet Skis</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/boat.PNG" alt="Boat Rentals and Sunset Cruises" />
-      <div class="card-content">
-        <h2>Boat Rentals & Sunset Cruises</h2>
-        <p>
-          Relax, cruise, and catch the best views on the water with your group. Perfect for families, couples, and anyone looking for the full Lake Erie experience.
-        </p>
-        <a href="#" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-
-    <div class="info-strip">
-      <h3>Why this page matters</h3>
+    <div class="intro">
+      <h2>Start with Erie Wake Zone.</h2>
       <p>
-        This is where FUNdusky stops being just a homepage and starts feeling like a real platform. Your real boat and jet ski images make this page feel local, believable, and bookable.
+        If FUNdusky is going to make money, this is exactly the kind of page that does it — real experience, real booking, real local fun.
       </p>
     </div>
 
-    <div class="two-col">
-      <div class="mini-card">
-        <h3>Good for groups</h3>
+    <div class="featured">
+      <img src="images/eriewakezone-main.jpg" alt="Erie Wake Zone main image" />
+      <div class="featured-content">
+        <div class="featured-badge">Featured Water Experience</div>
+        <h3>Erie Wake Zone</h3>
         <p>
-          Sunset cruises and boat rentals are ideal for families, friend groups, and visitors who want to hang out on the water without rushing.
+          One of the strongest local bookings you can make in Sandusky. If someone wants action on Lake Erie, Erie Wake Zone should be front and center.
         </p>
+
+        <div class="button-row">
+          <a href="eriewakezone.html" class="btn call">View Experience</a>
+          <a href="https://erie-wake-zone.manage.na1.bookingplatform.app/reserve/" target="_blank" class="btn book">Book Now</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=701+E+Water+Street+Sandusky+OH+44870" target="_blank" class="btn map">Directions</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="images/boat.PNG" alt="Boat rentals and cruises" />
+        <div class="card-content">
+          <h3>Boat Rentals & Cruises</h3>
+          <p>
+            Relax, cruise, and catch the best views on the water with your group. Great for families, couples, and anyone who wants a slower Lake Erie experience.
+          </p>
+        </div>
       </div>
 
-      <div class="mini-card">
-        <h3>Good for action</h3>
-        <p>
-          Jet skis are the fast, high-energy side of Lake Erie and instantly give visitors a reason to click deeper into the experience.
-        </p>
+      <div class="card">
+        <img src="images/eriewakezone-fleet.jpg" alt="Jet ski fleet" />
+        <div class="card-content">
+          <h3>Jet Ski Action</h3>
+          <p>
+            Fast, visual, and exactly the kind of thing visitors imagine when they think of summer in Sandusky. This is the energy side of the water category.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery-section">
+      <h2>See the experience</h2>
+      <div class="gallery">
+        <img src="images/eriewakezone-ride.jpg" alt="Erie Wake Zone ride" />
+        <img src="images/eriewakezone-fleet.jpg" alt="Erie Wake Zone fleet" />
+        <img src="images/eriewakezone-main.jpg" alt="Erie Wake Zone main group" />
+        <img src="images/eriewakezone-hero.jpg" alt="Erie Wake Zone sunset hero" />
       </div>
     </div>
 
