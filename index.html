@@ -18,29 +18,25 @@
       color: inherit;
     }
 
+    /* HERO */
     .hero {
       position: relative;
       height: 75vh;
       background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.25)),
                   url("images/hero-bg.jpg") center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      text-align: center;
-      padding-top: 80px;
-      padding-left: 20px;
-      padding-right: 20px;
       color: white;
+      text-align: center;
+      padding: 90px 20px 0; /* 🔥 TOP ANCHORED */
     }
 
     .hero-content {
-      max-width: 650px;
+      max-width: 640px;
+      margin: 0 auto;
     }
 
     .logo {
       width: 150px;
-      margin: 0 auto 12px;
-      display: block;
+      margin-bottom: 16px;
     }
 
     .hero h1 {
@@ -50,7 +46,7 @@
     }
 
     .hero p {
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 18px;
       line-height: 1.5;
       max-width: 560px;
@@ -58,10 +54,12 @@
       margin-right: auto;
     }
 
+    /* SECTION */
     .section {
       padding: 20px;
     }
 
+    /* CARDS */
     .card {
       position: relative;
       border-radius: 20px;
@@ -102,6 +100,7 @@
 
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
       <img src="images/fundusky-logo.png" class="logo" alt="FUNdusky logo">
@@ -110,11 +109,12 @@
     </div>
   </div>
 
+  <!-- CARDS -->
   <div class="section">
 
     <a href="water.html">
       <div class="card">
-        <img src="images/boat.PNG?v=10" alt="On the Water">
+        <img src="images/boat.PNG?v=11" alt="On the Water">
         <div class="card-overlay">
           <h2>On the Water</h2>
           <p>Jet skis, boats, and sunset cruises on Sandusky Bay.</p>
