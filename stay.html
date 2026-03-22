@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Where to Stay | FUNdusky</title>
   <meta name="description" content="Find great places to stay in Sandusky." />
   <style>
@@ -10,20 +10,18 @@
       --navy: #0c2d68;
       --orange: #f29a38;
       --orange-dark: #de8521;
-      --bg: #f5f9ff;
+      --bg: #f5f7fb;
       --text: #1c2333;
       --muted: #5f6b7a;
       --shadow: 0 12px 30px rgba(0,0,0,.12);
       --radius: 22px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
     }
@@ -42,7 +40,7 @@
       min-height: 56vh;
       background:
         linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45)),
-        url("images/hero-bg.jpg") center/cover no-repeat;
+        url("images/stay-stables-sign.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -64,7 +62,6 @@
       font-size: 14px;
       font-weight: 700;
       margin-bottom: 18px;
-      backdrop-filter: blur(4px);
     }
 
     .hero h1 {
@@ -113,7 +110,6 @@
       line-height: 1.6;
     }
 
-    .featured-list,
     .hotel-list {
       display: grid;
       gap: 24px;
@@ -171,41 +167,6 @@
       color: var(--orange-dark);
     }
 
-    .subsection {
-      margin-top: 46px;
-    }
-
-    .subsection h2 {
-      margin: 0 0 10px;
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      color: var(--navy);
-    }
-
-    .subsection p {
-      margin: 0 0 24px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .placeholder-card {
-      background: white;
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
-    }
-
-    .placeholder-card h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-      font-size: 1.3rem;
-    }
-
-    .placeholder-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
     .signup {
       background: var(--navy);
       color: white;
@@ -242,7 +203,6 @@
     }
 
     @media (min-width: 860px) {
-      .featured-list,
       .hotel-list {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -255,7 +215,7 @@
     <div class="hero-content">
       <div class="hero-tag">Sandusky Stay Picks</div>
       <h1>Where to Stay</h1>
-      <p>Featured stays, trusted hotels, and the best places to base your Sandusky trip.</p>
+      <p>Featured stays, trusted hotels, and easy booking.</p>
     </div>
   </section>
 
@@ -267,53 +227,26 @@
       <p>Start with the two stay options we want front and center.</p>
     </div>
 
-    <div class="featured-list">
+    <div class="hotel-list">
       <a href="stables.html" class="hotel-card">
-        <img src="images/stay-stables.jpg" alt="The Stables">
+        <img src="images/stay-stables-room.jpg" alt="Cedar Stables Inn & Suites">
         <div class="hotel-card-content">
           <div class="featured-badge">Featured Stay</div>
-          <h3>The Stables</h3>
-          <p>A smaller, more local-feel stay connected to Thirsty Pony and in a great Sandusky location.</p>
+          <h3>Cedar Stables Inn & Suites</h3>
+          <p>A boutique-style stay connected to Thirsty Pony and one of the most unique local options in Sandusky.</p>
           <span class="hotel-link">View stay →</span>
         </div>
       </a>
 
       <a href="holidayinnexpress.html" class="hotel-card">
-        <img src="images/stay-holidayinn.jpg" alt="Holiday Inn Express">
+        <img src="images/stay-holidayinn-room.jpg" alt="Holiday Inn Express">
         <div class="hotel-card-content">
           <div class="featured-badge">Featured Stay</div>
           <h3>Holiday Inn Express</h3>
-          <p>A clean, reliable nearby option and the go-to backup when The Stables is booked.</p>
+          <p>A clean, reliable nearby option and a strong go-to when you want a familiar, easy Sandusky stay.</p>
           <span class="hotel-link">View stay →</span>
         </div>
       </a>
-    </div>
-
-    <div class="subsection">
-      <h2>More Places to Stay</h2>
-      <p>We’ll keep building this section out with more Sandusky and Perkins Township hotels.</p>
-
-      <div class="hotel-list">
-        <div class="placeholder-card">
-          <h3>Hotel Breakers</h3>
-          <p>Add this next as a major anchor hotel on the stay page.</p>
-        </div>
-
-        <div class="placeholder-card">
-          <h3>Kalahari Resort</h3>
-          <p>Big family draw and one of the most important hotel listings to add.</p>
-        </div>
-
-        <div class="placeholder-card">
-          <h3>Great Wolf Lodge</h3>
-          <p>Another family-heavy stay that belongs in the next wave of listings.</p>
-        </div>
-
-        <div class="placeholder-card">
-          <h3>Castaway Bay</h3>
-          <p>A strong Cedar Point-area stay option to build into the directory.</p>
-        </div>
-      </div>
     </div>
 
     <div class="signup">
