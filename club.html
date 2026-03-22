@@ -4,26 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Club | FUNdusky</title>
-  <meta name="description" content="The Club in Sandusky — a local staple with strong food, atmosphere, and reservations available." />
+  <meta name="description" content="The Club in Sandusky — food, atmosphere, and reservations." />
   <style>
     :root {
       --navy: #0c2d68;
       --orange: #f29a38;
       --orange-dark: #de8521;
-      --purple: #4b2a7a;
-      --purple-dark: #3a2160;
-      --bg: #f5f9ff;
+      --purple: #5a33a2;
+      --purple-dark: #472781;
+      --bg: #f5f7fb;
       --text: #1c2333;
       --muted: #5f6b7a;
-      --shadow: 0 12px 30px rgba(0,0,0,.12);
-      --radius: 22px;
+      --shadow: 0 10px 28px rgba(0,0,0,0.10);
+      --radius: 20px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
     }
@@ -39,9 +41,9 @@
     }
 
     .hero {
-      min-height: 54vh;
+      min-height: 52vh;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.50)),
+        linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.5)),
         url("images/club-outside.jpg") center/cover no-repeat;
       display: flex;
       align-items: end;
@@ -57,28 +59,27 @@
 
     .hero-tag {
       display: inline-block;
-      background: rgba(255,255,255,.14);
-      border: 1px solid rgba(255,255,255,.32);
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.32);
       padding: 10px 16px;
       border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
       margin-bottom: 14px;
-      backdrop-filter: blur(4px);
     }
 
     .hero h1 {
       margin: 0 0 10px;
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
-      line-height: .96;
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      line-height: 0.96;
       font-weight: 800;
-      text-shadow: 0 6px 20px rgba(0,0,0,.22);
+      text-shadow: 0 6px 20px rgba(0,0,0,0.22);
     }
 
     .hero p {
       margin: 0;
       font-size: clamp(1rem, 2.5vw, 1.15rem);
-      color: rgba(255,255,255,.95);
+      color: rgba(255,255,255,0.96);
     }
 
     .container {
@@ -87,11 +88,11 @@
       padding: 28px 0 70px;
     }
 
-    .back-link {
+    .back {
       display: inline-block;
       margin-bottom: 22px;
       color: #4b2a7a;
-      font-weight: 700;
+      font-weight: bold;
       font-size: 1.05rem;
     }
 
@@ -116,8 +117,8 @@
       background: white;
       border-radius: var(--radius);
       overflow: hidden;
-      margin-bottom: 25px;
       box-shadow: var(--shadow);
+      margin-bottom: 24px;
     }
 
     .card img {
@@ -131,15 +132,15 @@
 
     .card h3 {
       margin: 0 0 10px;
+      font-size: 1.8rem;
       color: var(--navy);
-      font-size: 1.9rem;
     }
 
     .card p {
       margin: 0;
       color: var(--muted);
       line-height: 1.7;
-      font-size: 1.05rem;
+      font-size: 1.04rem;
     }
 
     .button-row {
@@ -151,14 +152,17 @@
 
     .button {
       display: inline-block;
-      background: var(--orange);
-      color: white;
       padding: 14px 24px;
       border-radius: 999px;
-      font-weight: 800;
+      font-weight: bold;
+      color: white;
     }
 
-    .button:hover {
+    .button.primary {
+      background: var(--orange);
+    }
+
+    .button.primary:hover {
       background: var(--orange-dark);
     }
 
@@ -174,9 +178,9 @@
       background: var(--purple-dark);
     }
 
-    .mini-note {
-      margin-top: 16px;
-      font-size: .95rem;
+    .note {
+      margin-top: 14px;
+      font-size: 0.95rem;
       color: var(--muted);
     }
   </style>
@@ -187,41 +191,48 @@
     <div class="hero-content">
       <div class="hero-tag">Featured on FUNdusky</div>
       <h1>The Club</h1>
-      <p>A local staple with strong food, atmosphere, and a Sandusky feel you can trust.</p>
+      <p>A Sandusky staple with strong food, atmosphere, and reservations available.</p>
     </div>
   </section>
 
   <div class="container">
-    <a href="eat.html" class="back-link">← Back to Restaurants</a>
+    <a href="eat.html" class="back">← Back to Restaurants</a>
 
     <div class="intro">
-      <h2>Start with the food.</h2>
-      <p>The Club is one of those places that feels established the second you see it — recognizable, grounded, and easy to recommend when someone wants a solid Sandusky meal.</p>
+      <h2>Food first.</h2>
+      <p>
+        The Club feels like one of those places you can trust right away — established, recognizable, and easy to recommend when someone wants a strong Sandusky dinner spot.
+      </p>
     </div>
 
     <div class="card">
-      <img src="images/club-food.jpg" alt="The Club food">
+      <img src="images/club-food.jpg" alt="The Club food" />
       <div class="card-content">
-        <h3>Food First</h3>
-        <p>Comfort food, strong local vibe, and the kind of restaurant that works whether you’re just getting into town or wrapping up the day looking for a dependable spot.</p>
+        <h3>Comfort food and a local feel</h3>
+        <p>
+          If you want a more established restaurant experience instead of guessing where to go, this is the kind of place that belongs on the short list.
+        </p>
 
         <div class="button-row">
-          <a href="https://www.google.com/maps/search/?api=1&query=The+Club+Sandusky+Ohio" target="_blank" class="button">Directions</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Club+Sandusky+Ohio" target="_blank" class="button primary">Directions</a>
           <a href="tel:+14196255055" class="button secondary">Call</a>
           <a href="https://www.google.com/maps/reserve/v/dine/c/5fEsq6nlSus?source=pa&opi=89978449&hl=en-US" target="_blank" class="button reserve">Reserve</a>
         </div>
 
-        <div class="mini-note">Reservations open in a new tab.</div>
+        <div class="note">Reservations open in a new tab.</div>
       </div>
     </div>
 
     <div class="card">
-      <img src="images/club-outside.jpg" alt="The Club exterior">
+      <img src="images/club-outside.jpg" alt="The Club exterior" />
       <div class="card-content">
-        <h3>A Sandusky Staple</h3>
-        <p>Recognizable, established, and easy to trust. The Club is the kind of place that helps visitors feel like they found a real local recommendation instead of guessing.</p>
+        <h3>A real Sandusky recommendation</h3>
+        <p>
+          Strong branding, recognizable location, and the kind of spot that helps visitors feel like they found something real instead of random.
+        </p>
       </div>
     </div>
+
   </div>
 
 </body>
