@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Where to Stay | FUNdusky</title>
+  <meta name="description" content="Find great places to stay in Sandusky." />
+  <style>
+    :root {
+      --navy: #0c2d68;
+      --orange: #f29a38;
+      --orange-dark: #de8521;
+      --bg: #f5f9ff;
+      --text: #1c2333;
+      --muted: #5f6b7a;
+      --shadow: 0 12px 30px rgba(0,0,0,.12);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .hero {
+      min-height: 56vh;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45)),
+        url("images/hero-bg.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 30px 18px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.32);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2.5rem, 7vw, 4.6rem);
+      line-height: .96;
+      font-weight: 800;
+      text-shadow: 0 6px 20px rgba(0,0,0,.2);
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: clamp(1rem, 2.8vw, 1.25rem);
+      line-height: 1.5;
+      color: rgba(255,255,255,.95);
+    }
+
+    .container {
+      width: min(calc(100% - 32px), 980px);
+      margin: 0 auto;
+      padding: 28px 0 70px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: #4b2a7a;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .section-head {
+      margin-bottom: 26px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--navy);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .featured-list,
+    .hotel-list {
+      display: grid;
+      gap: 24px;
+    }
+
+    .hotel-card {
+      display: block;
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform .18s ease;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .hotel-card img {
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .hotel-card-content {
+      padding: 22px;
+    }
+
+    .hotel-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+      color: var(--navy);
+    }
+
+    .hotel-card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1.02rem;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      background: #fff3df;
+      color: #a45a00;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .hotel-link {
+      display: inline-block;
+      font-weight: 800;
+      color: var(--orange-dark);
+    }
+
+    .subsection {
+      margin-top: 46px;
+    }
+
+    .subsection h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: var(--navy);
+    }
+
+    .subsection p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .placeholder-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .placeholder-card h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 1.3rem;
+    }
+
+    .placeholder-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .signup {
+      background: var(--navy);
+      color: white;
+      padding: 34px 28px;
+      border-radius: 24px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      margin-top: 48px;
+    }
+
+    .signup h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 2.8rem);
+    }
+
+    .signup p {
+      margin: 0 0 18px;
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,.94);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 800;
+    }
+
+    .button:hover {
+      background: var(--orange-dark);
+    }
+
+    @media (min-width: 860px) {
+      .featured-list,
+      .hotel-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Sandusky Stay Picks</div>
+      <h1>Where to Stay</h1>
+      <p>Featured stays, trusted hotels, and the best places to base your Sandusky trip.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="section-head">
+      <h2>Featured Stays</h2>
+      <p>Start with the two stay options we want front and center.</p>
+    </div>
+
+    <div class="featured-list">
+      <a href="stables.html" class="hotel-card">
+        <img src="images/stay-stables.jpg" alt="The Stables">
+        <div class="hotel-card-content">
+          <div class="featured-badge">Featured Stay</div>
+          <h3>The Stables</h3>
+          <p>A smaller, more local-feel stay connected to Thirsty Pony and in a great Sandusky location.</p>
+          <span class="hotel-link">View stay →</span>
+        </div>
+      </a>
+
+      <a href="holidayinnexpress.html" class="hotel-card">
+        <img src="images/stay-holidayinn.jpg" alt="Holiday Inn Express">
+        <div class="hotel-card-content">
+          <div class="featured-badge">Featured Stay</div>
+          <h3>Holiday Inn Express</h3>
+          <p>A clean, reliable nearby option and the go-to backup when The Stables is booked.</p>
+          <span class="hotel-link">View stay →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="subsection">
+      <h2>More Places to Stay</h2>
+      <p>We’ll keep building this section out with more Sandusky and Perkins Township hotels.</p>
+
+      <div class="hotel-list">
+        <div class="placeholder-card">
+          <h3>Hotel Breakers</h3>
+          <p>Add this next as a major anchor hotel on the stay page.</p>
+        </div>
+
+        <div class="placeholder-card">
+          <h3>Kalahari Resort</h3>
+          <p>Big family draw and one of the most important hotel listings to add.</p>
+        </div>
+
+        <div class="placeholder-card">
+          <h3>Great Wolf Lodge</h3>
+          <p>Another family-heavy stay that belongs in the next wave of listings.</p>
+        </div>
+
+        <div class="placeholder-card">
+          <h3>Castaway Bay</h3>
+          <p>A strong Cedar Point-area stay option to build into the directory.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="signup">
+      <h2>Own or manage a hotel?</h2>
+      <p>Get featured on FUNdusky and become part of the Sandusky concierge experience.</p>
+      <a href="#" class="button">Get Featured</a>
+    </div>
+  </div>
+
+</body>
+</html>
